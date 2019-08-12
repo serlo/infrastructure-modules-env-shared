@@ -1,1 +1,1 @@
-TODO
+Terraform modules, which are shared between the environments dev/staging and production.
