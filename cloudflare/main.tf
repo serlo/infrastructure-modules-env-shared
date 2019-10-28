@@ -78,3 +78,7 @@ resource "cloudflare_record" "cname_stats" {
   type    = "CNAME"
   proxied = true
 }
+
+provider "cloudflare" {
+  version = "~> 2.0"
+}
