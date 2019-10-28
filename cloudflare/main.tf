@@ -1,6 +1,6 @@
 # A-Record
 resource "cloudflare_record" "a-record" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "@"
   value   = var.ip
   type    = "A"
@@ -9,7 +9,7 @@ resource "cloudflare_record" "a-record" {
 
 # www.
 resource "cloudflare_record" "cname_www" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "www"
   value   = var.domain
   type    = "CNAME"
@@ -18,7 +18,7 @@ resource "cloudflare_record" "cname_www" {
 
 # de.
 resource "cloudflare_record" "cname_de" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "de"
   value   = var.domain
   type    = "CNAME"
@@ -27,7 +27,7 @@ resource "cloudflare_record" "cname_de" {
 
 # fr.
 resource "cloudflare_record" "cname_fr" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "fr"
   value   = var.domain
   type    = "CNAME"
@@ -36,7 +36,7 @@ resource "cloudflare_record" "cname_fr" {
 
 # hi.
 resource "cloudflare_record" "cname_hi" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "hi"
   value   = var.domain
   type    = "CNAME"
@@ -45,7 +45,7 @@ resource "cloudflare_record" "cname_hi" {
 
 # en.
 resource "cloudflare_record" "cname_en" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "en"
   value   = var.domain
   type    = "CNAME"
@@ -54,7 +54,7 @@ resource "cloudflare_record" "cname_en" {
 
 # es.
 resource "cloudflare_record" "cname_es" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "es"
   value   = var.domain
   type    = "CNAME"
@@ -63,7 +63,7 @@ resource "cloudflare_record" "cname_es" {
 
 # ta.
 resource "cloudflare_record" "cname_ta" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "ta"
   value   = var.domain
   type    = "CNAME"
@@ -72,7 +72,7 @@ resource "cloudflare_record" "cname_ta" {
 
 # stats. (KPI/Grafana)
 resource "cloudflare_record" "cname_stats" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "stats"
   value   = var.domain
   type    = "CNAME"
