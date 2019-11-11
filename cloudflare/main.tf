@@ -79,6 +79,15 @@ resource "cloudflare_record" "cname_stats" {
   proxied = true
 }
 
+# rocket. (Rocket-Chat)
+resource "cloudflare_record" "cname_community" {
+  domain  = var.domain
+  name    = "community"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
 provider "cloudflare" {
   version = "~> 2.0"
 }
