@@ -81,7 +81,7 @@ resource "cloudflare_record" "cname_stats" {
 
 # rocket. (Rocket-Chat)
 resource "cloudflare_record" "cname_community" {
-  domain  = var.domain
+  zone_id = var.zone_id
   name    = "community"
   value   = var.domain
   type    = "CNAME"
