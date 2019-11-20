@@ -79,10 +79,19 @@ resource "cloudflare_record" "cname_stats" {
   proxied = true
 }
 
-# rocket. (Rocket-Chat)
+# community. (Rocket-Chat)
 resource "cloudflare_record" "cname_community" {
   zone_id = var.zone_id
   name    = "community"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
+# hydra. (Hydra Public)
+resource "cloudflare_record" "cname_hydra" {
+  zone_id = var.zone_id
+  name    = "hydra"
   value   = var.domain
   type    = "CNAME"
   proxied = true
