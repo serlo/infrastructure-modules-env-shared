@@ -96,7 +96,3 @@ resource "cloudflare_record" "cname_hydra" {
   type    = "CNAME"
   proxied = true
 }
-
-provider "cloudflare" {
-  version = "~> 2.0"
-}
