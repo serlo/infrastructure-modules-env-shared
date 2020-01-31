@@ -96,3 +96,12 @@ resource "cloudflare_record" "cname_hydra" {
   type    = "CNAME"
   proxied = true
 }
+
+# pacts. (Pact Broker)
+resource "cloudflare_record" "cname_pacts" {
+  zone_id = var.zone_id
+  name    = "pacts"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
