@@ -105,3 +105,22 @@ resource "cloudflare_record" "cname_pacts" {
   type    = "CNAME"
   proxied = true
 }
+
+# api. (handled by Cloudflare Worker)
+resource "cloudflare_record" "a-record_api" {
+  zone_id = var.zone_id
+  name    = "api"
+  value   = "192.0.2.1"
+  type    = "A"
+  proxied = true
+}
+
+# are-we-edtr-io-yet. (handled by Cloudflare Worker)
+resource "cloudflare_record" "a-record_are-we-edtr-io-yet" {
+  zone_id = var.zone_id
+  name    = "are-we-edtr-io-yet"
+  value   = "192.0.2.1"
+  type    = "A"
+  proxied = true
+}
+
