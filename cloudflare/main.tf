@@ -79,6 +79,15 @@ resource "cloudflare_record" "cname_stats" {
   proxied = true
 }
 
+# analytics. (Matomo)
+resource "cloudflare_record" "cname_analytics" {
+  zone_id = var.zone_id
+  name    = "analytics"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
 # community. (Rocket-Chat)
 resource "cloudflare_record" "cname_community" {
   zone_id = var.zone_id
