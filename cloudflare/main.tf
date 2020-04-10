@@ -115,12 +115,12 @@ resource "cloudflare_record" "cname_pacts" {
   proxied = true
 }
 
-# api. (handled by Cloudflare Worker)
-resource "cloudflare_record" "a-record_api" {
+# api.
+resource "cloudflare_record" "cname_api" {
   zone_id = var.zone_id
   name    = "api"
-  value   = "192.0.2.1"
-  type    = "A"
+  value   = var.domain
+  type    = "CNAME"
   proxied = true
 }
 
