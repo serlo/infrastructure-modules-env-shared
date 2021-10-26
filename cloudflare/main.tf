@@ -106,6 +106,15 @@ resource "cloudflare_record" "cname_hydra" {
   proxied = true
 }
 
+# kratos. (Kratos Public)
+resource "cloudflare_record" "cname_kratos" {
+  zone_id = var.zone_id
+  name    = "kratos"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
 # api.
 resource "cloudflare_record" "cname_api" {
   zone_id = var.zone_id
@@ -123,4 +132,3 @@ resource "cloudflare_record" "a-record_are-we-edtr-io-yet" {
   type    = "A"
   proxied = true
 }
-
