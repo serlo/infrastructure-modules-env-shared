@@ -70,51 +70,6 @@ resource "cloudflare_record" "cname_ta" {
   proxied = true
 }
 
-# stats. (KPI/Grafana)
-resource "cloudflare_record" "cname_stats" {
-  zone_id = var.zone_id
-  name    = "stats"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
-# analytics. (Matomo)
-resource "cloudflare_record" "cname_analytics" {
-  zone_id = var.zone_id
-  name    = "analytics"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
-# community. (Rocket-Chat)
-resource "cloudflare_record" "cname_community" {
-  zone_id = var.zone_id
-  name    = "community"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
-# hydra. (Hydra Public)
-resource "cloudflare_record" "cname_hydra" {
-  zone_id = var.zone_id
-  name    = "hydra"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
-# kratos. (Kratos Public)
-resource "cloudflare_record" "cname_kratos" {
-  zone_id = var.zone_id
-  name    = "kratos"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
 # api.
 resource "cloudflare_record" "cname_api" {
   zone_id = var.zone_id
@@ -130,5 +85,41 @@ resource "cloudflare_record" "a-record_are-we-edtr-io-yet" {
   name    = "are-we-edtr-io-yet"
   value   = "192.0.2.1"
   type    = "A"
+  proxied = true
+}
+
+# community. (Rocket-Chat)
+resource "cloudflare_record" "cname_community" {
+  zone_id = var.zone_id
+  name    = "community"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
+# enmeshed.
+resource "cloudflare_record" "cname_enmeshed" {
+  zone_id = var.zone_id
+  name    = "enmeshed"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
+# hydra. (Hydra Public)
+resource "cloudflare_record" "cname_hydra" {
+  zone_id = var.zone_id
+  name    = "hydra"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
+# stats. (KPI/Grafana)
+resource "cloudflare_record" "cname_stats" {
+  zone_id = var.zone_id
+  name    = "stats"
+  value   = var.domain
+  type    = "CNAME"
   proxied = true
 }
