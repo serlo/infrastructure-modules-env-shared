@@ -115,6 +115,15 @@ resource "cloudflare_record" "cname_hydra" {
   proxied = true
 }
 
+# keycloak.
+resource "cloudflare_record" "cname_keycloak" {
+  zone_id = var.zone_id
+  name    = "keycloak"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
+
 # stats. (KPI/Grafana)
 resource "cloudflare_record" "cname_stats" {
   zone_id = var.zone_id
