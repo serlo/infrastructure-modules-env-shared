@@ -97,15 +97,6 @@ resource "cloudflare_record" "cname_community" {
   proxied = true
 }
 
-# enmeshed.
-resource "cloudflare_record" "cname_enmeshed" {
-  zone_id = var.zone_id
-  name    = "enmeshed"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
 # hydra. (Hydra Public)
 resource "cloudflare_record" "cname_hydra" {
   zone_id = var.zone_id
@@ -119,15 +110,6 @@ resource "cloudflare_record" "cname_hydra" {
 resource "cloudflare_record" "cname_kratos" {
   zone_id = var.zone_id
   name    = "kratos"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
-# keycloak.
-resource "cloudflare_record" "cname_keycloak" {
-  zone_id = var.zone_id
-  name    = "keycloak"
   value   = var.domain
   type    = "CNAME"
   proxied = true
