@@ -125,7 +125,7 @@ resource "cloudflare_record" "cname_stats" {
 }
 
 # mfnf. (MFNF to Edtr.io Mapping)
-resource "cloudflare_record" "cname_stats" {
+resource "cloudflare_record" "cname_mfnf" {
   zone_id = var.zone_id
   name    = "mfnf"
   value   = var.domain
