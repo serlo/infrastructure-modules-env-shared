@@ -123,3 +123,12 @@ resource "cloudflare_record" "cname_stats" {
   type    = "CNAME"
   proxied = true
 }
+
+# mfnf. (MFNF to Edtr.io Mapping)
+resource "cloudflare_record" "cname_stats" {
+  zone_id = var.zone_id
+  name    = "mfnf"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
