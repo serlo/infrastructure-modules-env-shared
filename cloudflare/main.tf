@@ -132,3 +132,12 @@ resource "cloudflare_record" "cname_mfnf" {
   type    = "CNAME"
   proxied = true
 }
+
+# kpi-dashboard. (KPI/Custom Evaluations Dashboard)
+resource "cloudflare_record" "cname_kpi_dashboard" {
+  zone_id = var.zone_id
+  name    = "kpi-dashboard"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
