@@ -141,3 +141,12 @@ resource "cloudflare_record" "cname_kpi_dashboard" {
   type    = "CNAME"
   proxied = true
 }
+
+# enmeshed (Data Wallet)
+resource "cloudflare_record" "cname_enmeshed" {
+  zone_id = var.zone_id
+  name    = "enmeshed"
+  value   = var.domain
+  type    = "CNAME"
+  proxied = true
+}
