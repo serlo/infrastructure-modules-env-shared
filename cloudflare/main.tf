@@ -106,15 +106,6 @@ resource "cloudflare_record" "cname_kratos" {
   proxied = true
 }
 
-# stats. (KPI/Grafana)
-resource "cloudflare_record" "cname_stats" {
-  zone_id = var.zone_id
-  name    = "stats"
-  value   = var.domain
-  type    = "CNAME"
-  proxied = true
-}
-
 # mfnf. (MFNF to Edtr.io Mapping)
 resource "cloudflare_record" "cname_mfnf" {
   zone_id = var.zone_id
